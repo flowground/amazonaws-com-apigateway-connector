@@ -1,0 +1,57 @@
+{
+    "type": "object",
+    "properties": {
+        "mode": {
+            "required": true,
+            "type": "string",
+            "enum": [
+                "import"
+            ]
+        },
+        "Version": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "description": "The POST request to import API keys from an external source, such as a CSV-formatted file.",
+            "properties": {
+                "body": {
+                    "description": "The payload of the POST request to import API keys. For the payload format, see <a href=\"https://docs.aws.amazon.com/apigateway/latest/developerguide/api-key-file-format.html\">API Key File Format</a>.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "body"
+            ],
+            "type": "object"
+        },
+        "X_Amz_Content_Sha256": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Date": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Algorithm": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Credential": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Security_Token": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Signature": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_SignedHeaders": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

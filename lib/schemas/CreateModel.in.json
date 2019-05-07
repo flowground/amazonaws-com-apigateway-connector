@@ -1,0 +1,67 @@
+{
+    "type": "object",
+    "properties": {
+        "restapi_id": {
+            "required": true,
+            "type": "string"
+        },
+        "Version": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "description": "Request to add a new <a>Model</a> to an existing <a>RestApi</a> resource.",
+            "properties": {
+                "contentType": {
+                    "description": "[Required] The content-type for the model.",
+                    "type": "string"
+                },
+                "description": {
+                    "description": "The description of the model.",
+                    "type": "string"
+                },
+                "name": {
+                    "description": "[Required] The name of the model. Must be alphanumeric.",
+                    "type": "string"
+                },
+                "schema": {
+                    "description": "The schema for the model. For <code>application/json</code> models, this should be <a href=\"https://tools.ietf.org/html/draft-zyp-json-schema-04\" target=\"_blank\">JSON schema draft 4</a> model.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name",
+                "contentType"
+            ],
+            "type": "object"
+        },
+        "X_Amz_Content_Sha256": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Date": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Algorithm": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Credential": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Security_Token": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Signature": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_SignedHeaders": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

@@ -1,0 +1,62 @@
+{
+    "type": "object",
+    "properties": {
+        "domain_name": {
+            "required": true,
+            "type": "string"
+        },
+        "Version": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "description": "Requests API Gateway to create a new <a>BasePathMapping</a> resource.",
+            "properties": {
+                "basePath": {
+                    "description": "The base path name that callers of the API must provide as part of the URL after the domain name. This value must be unique for all of the mappings across a single API. Leave this blank if you do not want callers to specify a base path name after the domain name.",
+                    "type": "string"
+                },
+                "restApiId": {
+                    "description": "[Required] The string identifier of the associated <a>RestApi</a>.",
+                    "type": "string"
+                },
+                "stage": {
+                    "description": "The name of the API's stage that you want to use for this mapping. Leave this blank if you do not want callers to explicitly specify the stage name after any base path name.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "restApiId"
+            ],
+            "type": "object"
+        },
+        "X_Amz_Content_Sha256": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Date": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Algorithm": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Credential": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Security_Token": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Signature": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_SignedHeaders": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

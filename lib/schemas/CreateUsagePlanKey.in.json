@@ -1,0 +1,59 @@
+{
+    "type": "object",
+    "properties": {
+        "usageplanId": {
+            "required": true,
+            "type": "string"
+        },
+        "Version": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "description": "The POST request to create a usage plan key for adding an existing API key to a usage plan.",
+            "properties": {
+                "keyId": {
+                    "description": "[Required] The identifier of a <a>UsagePlanKey</a> resource for a plan customer.",
+                    "type": "string"
+                },
+                "keyType": {
+                    "description": "[Required] The type of a <a>UsagePlanKey</a> resource for a plan customer.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "keyId",
+                "keyType"
+            ],
+            "type": "object"
+        },
+        "X_Amz_Content_Sha256": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Date": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Algorithm": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Credential": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Security_Token": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Signature": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_SignedHeaders": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

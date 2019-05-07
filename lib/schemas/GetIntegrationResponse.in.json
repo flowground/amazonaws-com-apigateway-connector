@@ -1,0 +1,46 @@
+{
+    "type": "object",
+    "properties": {
+        "restapi_id": {
+            "required": true,
+            "type": "string"
+        },
+        "resource_id": {
+            "required": true,
+            "type": "string"
+        },
+        "http_method": {
+            "required": true,
+            "type": "string"
+        },
+        "status_code": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "description": "Represents a get integration response request.",
+            "properties": {},
+            "type": "object"
+        },
+        "X_Amz_Algorithm": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Credential": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Security_Token": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Signature": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_SignedHeaders": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

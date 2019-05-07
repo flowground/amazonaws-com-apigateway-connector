@@ -1,0 +1,59 @@
+{
+    "type": "object",
+    "properties": {
+        "restapi_id": {
+            "required": true,
+            "type": "string"
+        },
+        "Version": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "description": "Creates a <a>RequestValidator</a> of a given <a>RestApi</a>.",
+            "properties": {
+                "name": {
+                    "description": "The name of the to-be-created <a>RequestValidator</a>.",
+                    "type": "string"
+                },
+                "validateRequestBody": {
+                    "description": "A Boolean flag to indicate whether to validate request body according to the configured model schema for the method (<code>true</code>) or not (<code>false</code>).",
+                    "type": "boolean"
+                },
+                "validateRequestParameters": {
+                    "description": "A Boolean flag to indicate whether to validate request parameters, <code>true</code>, or not <code>false</code>.",
+                    "type": "boolean"
+                }
+            },
+            "type": "object"
+        },
+        "X_Amz_Content_Sha256": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Date": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Algorithm": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Credential": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Security_Token": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Signature": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_SignedHeaders": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

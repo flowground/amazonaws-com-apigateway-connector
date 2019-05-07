@@ -1,0 +1,153 @@
+{
+    "type": "object",
+    "properties": {
+        "restapi_id": {
+            "required": true,
+            "type": "string"
+        },
+        "Version": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "description": "Requests API Gateway to create a <a>Stage</a> resource.",
+            "properties": {
+                "cacheClusterEnabled": {
+                    "description": "Whether cache clustering is enabled for the stage.",
+                    "type": "boolean"
+                },
+                "cacheClusterSize": {
+                    "description": "The stage's cache cluster size.",
+                    "enum": [
+                        "0.5",
+                        "1.6",
+                        "6.1",
+                        "13.5",
+                        "28.4",
+                        "58.2",
+                        "118",
+                        "237"
+                    ],
+                    "type": "string"
+                },
+                "canarySettings": {
+                    "description": "The canary deployment settings of this stage.",
+                    "properties": {
+                        "deploymentId": {
+                            "description": "The ID of the canary deployment.",
+                            "type": "string"
+                        },
+                        "percentTraffic": {
+                            "description": "The percent (0-100) of traffic diverted to a canary deployment.",
+                            "format": "double",
+                            "type": "number"
+                        },
+                        "stageVariableOverrides": {
+                            "description": "Stage variables overridden for a canary release deployment, including new stage variables introduced in the canary. These stage variables are represented as a string-to-string map between stage variable names and their values.",
+                            "items": {
+                                "properties": {
+                                    "key": {
+                                        "type": "string"
+                                    },
+                                    "value": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            },
+                            "type": "array"
+                        },
+                        "useStageCache": {
+                            "description": "A Boolean flag to indicate whether the canary deployment uses the stage cache or not.",
+                            "type": "boolean"
+                        }
+                    },
+                    "type": "object"
+                },
+                "deploymentId": {
+                    "description": "[Required] The identifier of the <a>Deployment</a> resource for the <a>Stage</a> resource.",
+                    "type": "string"
+                },
+                "description": {
+                    "description": "The description of the <a>Stage</a> resource.",
+                    "type": "string"
+                },
+                "documentationVersion": {
+                    "description": "The version of the associated API documentation.",
+                    "type": "string"
+                },
+                "stageName": {
+                    "description": "[Required] The name for the <a>Stage</a> resource.",
+                    "type": "string"
+                },
+                "tags": {
+                    "description": "The key-value map of strings. The valid character set is [a-zA-Z+-=._:/]. The tag key can be up to 128 characters and must not start with <code>aws:</code>. The tag value can be up to 256 characters.",
+                    "items": {
+                        "properties": {
+                            "key": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "tracingEnabled": {
+                    "description": "Specifies whether active tracing with X-ray is enabled for the <a>Stage</a>.",
+                    "type": "boolean"
+                },
+                "variables": {
+                    "description": "A map that defines the stage variables for the new <a>Stage</a> resource. Variable names can have alphanumeric and underscore characters, and the values must match <code>[A-Za-z0-9-._~:/?#&amp;=,]+</code>.",
+                    "items": {
+                        "properties": {
+                            "key": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "stageName",
+                "deploymentId"
+            ],
+            "type": "object"
+        },
+        "X_Amz_Content_Sha256": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Date": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Algorithm": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Credential": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Security_Token": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Signature": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_SignedHeaders": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

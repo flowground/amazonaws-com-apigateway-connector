@@ -1,0 +1,2080 @@
+{
+    "title": "Amazon API Gateway",
+    "description": "<fullname>Amazon API Gateway</fullname> <p>Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or other publicly addressable web services that are hosted outside of AWS.</p>",
+    "docsUrl": "https://aws.amazon.com/apigateway/",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/apigateway/2015-07-09/swagger.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "https://apigateway.amazonaws.com/",
+                    "http://apigateway.amazonaws.com/",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            },
+            "hmac": {
+                "label": "Authorization (hmac)",
+                "viewClass": "TextFieldView",
+                "note": "Amazon Signature authorization v4"
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "GetAccount": {
+            "main": "./lib/actions/GetAccount.js",
+            "title": "Gets information about the current <a>Account</a> resource.",
+            "description": "Gets information about the current <a>Account</a> resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetAccount.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UpdateAccount": {
+            "main": "./lib/actions/UpdateAccount.js",
+            "title": "Changes information about the current <a>Account</a> resource.",
+            "description": "Changes information about the current <a>Account</a> resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UpdateAccount.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetApiKeys": {
+            "main": "./lib/actions/GetApiKeys.js",
+            "title": "Gets information about the current <a>ApiKeys</a> resource.",
+            "description": "Gets information about the current <a>ApiKeys</a> resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetApiKeys.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CreateApiKey": {
+            "main": "./lib/actions/CreateApiKey.js",
+            "title": "<p>Create an <a>ApiKey</a> resource. </p> <div class=\"seeAlso\"><a href=\"https://docs.aws.amazon.com/cli/latest/reference/apigateway/create-api-key.html\">AWS CLI</a></div>",
+            "description": "<p>Create an <a>ApiKey</a> resource. </p> <div class=\"seeAlso\"><a href=\"https://docs.aws.amazon.com/cli/latest/reference/apigateway/create-api-key.html\">AWS CLI</a></div>",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CreateApiKey.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ImportApiKeys": {
+            "main": "./lib/actions/ImportApiKeys.js",
+            "title": "Import API keys from an external source, such as a CSV-formatted file.",
+            "description": "Import API keys from an external source, such as a CSV-formatted file.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ImportApiKeys.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteApiKey": {
+            "main": "./lib/actions/DeleteApiKey.js",
+            "title": "Deletes the <a>ApiKey</a> resource.",
+            "description": "Deletes the <a>ApiKey</a> resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteApiKey.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetApiKey": {
+            "main": "./lib/actions/GetApiKey.js",
+            "title": "Gets information about the current <a>ApiKey</a> resource.",
+            "description": "Gets information about the current <a>ApiKey</a> resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetApiKey.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UpdateApiKey": {
+            "main": "./lib/actions/UpdateApiKey.js",
+            "title": "Changes information about an <a>ApiKey</a> resource.",
+            "description": "Changes information about an <a>ApiKey</a> resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UpdateApiKey.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetClientCertificates": {
+            "main": "./lib/actions/GetClientCertificates.js",
+            "title": "Gets a collection of <a>ClientCertificate</a> resources.",
+            "description": "Gets a collection of <a>ClientCertificate</a> resources.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetClientCertificates.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GenerateClientCertificate": {
+            "main": "./lib/actions/GenerateClientCertificate.js",
+            "title": "Generates a <a>ClientCertificate</a> resource.",
+            "description": "Generates a <a>ClientCertificate</a> resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GenerateClientCertificate.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteClientCertificate": {
+            "main": "./lib/actions/DeleteClientCertificate.js",
+            "title": "Deletes the <a>ClientCertificate</a> resource.",
+            "description": "Deletes the <a>ClientCertificate</a> resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteClientCertificate.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetClientCertificate": {
+            "main": "./lib/actions/GetClientCertificate.js",
+            "title": "Gets information about the current <a>ClientCertificate</a> resource.",
+            "description": "Gets information about the current <a>ClientCertificate</a> resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetClientCertificate.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UpdateClientCertificate": {
+            "main": "./lib/actions/UpdateClientCertificate.js",
+            "title": "Changes information about an <a>ClientCertificate</a> resource.",
+            "description": "Changes information about an <a>ClientCertificate</a> resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UpdateClientCertificate.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetDomainNames": {
+            "main": "./lib/actions/GetDomainNames.js",
+            "title": "Represents a collection of <a>DomainName</a> resources.",
+            "description": "Represents a collection of <a>DomainName</a> resources.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetDomainNames.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CreateDomainName": {
+            "main": "./lib/actions/CreateDomainName.js",
+            "title": "Creates a new domain name.",
+            "description": "Creates a new domain name.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CreateDomainName.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteDomainName": {
+            "main": "./lib/actions/DeleteDomainName.js",
+            "title": "Deletes the <a>DomainName</a> resource.",
+            "description": "Deletes the <a>DomainName</a> resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteDomainName.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetDomainName": {
+            "main": "./lib/actions/GetDomainName.js",
+            "title": "Represents a domain name that is contained in a simpler, more intuitive URL that can be called.",
+            "description": "Represents a domain name that is contained in a simpler, more intuitive URL that can be called.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetDomainName.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UpdateDomainName": {
+            "main": "./lib/actions/UpdateDomainName.js",
+            "title": "Changes information about the <a>DomainName</a> resource.",
+            "description": "Changes information about the <a>DomainName</a> resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UpdateDomainName.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetBasePathMappings": {
+            "main": "./lib/actions/GetBasePathMappings.js",
+            "title": "Represents a collection of <a>BasePathMapping</a> resources.",
+            "description": "Represents a collection of <a>BasePathMapping</a> resources.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetBasePathMappings.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CreateBasePathMapping": {
+            "main": "./lib/actions/CreateBasePathMapping.js",
+            "title": "Creates a new <a>BasePathMapping</a> resource.",
+            "description": "Creates a new <a>BasePathMapping</a> resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CreateBasePathMapping.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteBasePathMapping": {
+            "main": "./lib/actions/DeleteBasePathMapping.js",
+            "title": "Deletes the <a>BasePathMapping</a> resource.",
+            "description": "Deletes the <a>BasePathMapping</a> resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteBasePathMapping.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetBasePathMapping": {
+            "main": "./lib/actions/GetBasePathMapping.js",
+            "title": "Describe a <a>BasePathMapping</a> resource.",
+            "description": "Describe a <a>BasePathMapping</a> resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetBasePathMapping.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UpdateBasePathMapping": {
+            "main": "./lib/actions/UpdateBasePathMapping.js",
+            "title": "Changes information about the <a>BasePathMapping</a> resource.",
+            "description": "Changes information about the <a>BasePathMapping</a> resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UpdateBasePathMapping.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetRestApis": {
+            "main": "./lib/actions/GetRestApis.js",
+            "title": "Lists the <a>RestApis</a> resources for your collection.",
+            "description": "Lists the <a>RestApis</a> resources for your collection.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetRestApis.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CreateRestApi": {
+            "main": "./lib/actions/CreateRestApi.js",
+            "title": "Creates a new <a>RestApi</a> resource.",
+            "description": "Creates a new <a>RestApi</a> resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CreateRestApi.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ImportRestApi": {
+            "main": "./lib/actions/ImportRestApi.js",
+            "title": "A feature of the API Gateway control service for creating a new API from an external API definition file.",
+            "description": "A feature of the API Gateway control service for creating a new API from an external API definition file.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ImportRestApi.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteRestApi": {
+            "main": "./lib/actions/DeleteRestApi.js",
+            "title": "Deletes the specified API.",
+            "description": "Deletes the specified API.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteRestApi.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetRestApi": {
+            "main": "./lib/actions/GetRestApi.js",
+            "title": "Lists the <a>RestApi</a> resource in the collection.",
+            "description": "Lists the <a>RestApi</a> resource in the collection.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetRestApi.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PutRestApi": {
+            "main": "./lib/actions/PutRestApi.js",
+            "title": "A feature of the API Gateway control service for updating an existing API with an input of external API definitions. The update can take the form of merging the supplied definition into the existing API or overwriting the existing API.",
+            "description": "A feature of the API Gateway control service for updating an existing API with an input of external API definitions. The update can take the form of merging the supplied definition into the existing API or overwriting the existing API.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PutRestApi.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UpdateRestApi": {
+            "main": "./lib/actions/UpdateRestApi.js",
+            "title": "Changes information about the specified API.",
+            "description": "Changes information about the specified API.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UpdateRestApi.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetAuthorizers": {
+            "main": "./lib/actions/GetAuthorizers.js",
+            "title": "<p>Describe an existing <a>Authorizers</a> resource.</p> <div class=\"seeAlso\"><a href=\"https://docs.aws.amazon.com/cli/latest/reference/apigateway/get-authorizers.html\">AWS CLI</a></div>",
+            "description": "<p>Describe an existing <a>Authorizers</a> resource.</p> <div class=\"seeAlso\"><a href=\"https://docs.aws.amazon.com/cli/latest/reference/apigateway/get-authorizers.html\">AWS CLI</a></div>",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetAuthorizers.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CreateAuthorizer": {
+            "main": "./lib/actions/CreateAuthorizer.js",
+            "title": "<p>Adds a new <a>Authorizer</a> resource to an existing <a>RestApi</a> resource.</p> <div class=\"seeAlso\"><a href=\"https://docs.aws.amazon.com/cli/latest/reference/apigateway/create-authorizer.html\">AWS CLI</a></div>",
+            "description": "<p>Adds a new <a>Authorizer</a> resource to an existing <a>RestApi</a> resource.</p> <div class=\"seeAlso\"><a href=\"https://docs.aws.amazon.com/cli/latest/reference/apigateway/create-authorizer.html\">AWS CLI</a></div>",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CreateAuthorizer.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteAuthorizer": {
+            "main": "./lib/actions/DeleteAuthorizer.js",
+            "title": "<p>Deletes an existing <a>Authorizer</a> resource.</p> <div class=\"seeAlso\"><a href=\"https://docs.aws.amazon.com/cli/latest/reference/apigateway/delete-authorizer.html\">AWS CLI</a></div>",
+            "description": "<p>Deletes an existing <a>Authorizer</a> resource.</p> <div class=\"seeAlso\"><a href=\"https://docs.aws.amazon.com/cli/latest/reference/apigateway/delete-authorizer.html\">AWS CLI</a></div>",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteAuthorizer.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetAuthorizer": {
+            "main": "./lib/actions/GetAuthorizer.js",
+            "title": "<p>Describe an existing <a>Authorizer</a> resource.</p> <div class=\"seeAlso\"><a href=\"https://docs.aws.amazon.com/cli/latest/reference/apigateway/get-authorizer.html\">AWS CLI</a></div>",
+            "description": "<p>Describe an existing <a>Authorizer</a> resource.</p> <div class=\"seeAlso\"><a href=\"https://docs.aws.amazon.com/cli/latest/reference/apigateway/get-authorizer.html\">AWS CLI</a></div>",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetAuthorizer.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "TestInvokeAuthorizer": {
+            "main": "./lib/actions/TestInvokeAuthorizer.js",
+            "title": "<p>Simulate the execution of an <a>Authorizer</a> in your <a>RestApi</a> with headers, parameters, and an incoming request body.</p> <div class=\"seeAlso\"> <a href=\"https://docs.aws.amazon.com/apigateway/latest/developerguide/use-custom-authorizer.html\">Enable custom authorizers</a> </div>",
+            "description": "<p>Simulate the execution of an <a>Authorizer</a> in your <a>RestApi</a> with headers, parameters, and an incoming request body.</p> <div class=\"seeAlso\"> <a href=\"https://docs.aws.amazon.com/apigateway/latest/developerguide/use-custom-authorizer.html\">Enable custom authorizers</a> </div>",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/TestInvokeAuthorizer.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UpdateAuthorizer": {
+            "main": "./lib/actions/UpdateAuthorizer.js",
+            "title": "<p>Updates an existing <a>Authorizer</a> resource.</p> <div class=\"seeAlso\"><a href=\"https://docs.aws.amazon.com/cli/latest/reference/apigateway/update-authorizer.html\">AWS CLI</a></div>",
+            "description": "<p>Updates an existing <a>Authorizer</a> resource.</p> <div class=\"seeAlso\"><a href=\"https://docs.aws.amazon.com/cli/latest/reference/apigateway/update-authorizer.html\">AWS CLI</a></div>",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UpdateAuthorizer.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetDeployments": {
+            "main": "./lib/actions/GetDeployments.js",
+            "title": "Gets information about a <a>Deployments</a> collection.",
+            "description": "Gets information about a <a>Deployments</a> collection.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetDeployments.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CreateDeployment": {
+            "main": "./lib/actions/CreateDeployment.js",
+            "title": "Creates a <a>Deployment</a> resource, which makes a specified <a>RestApi</a> callable over the internet.",
+            "description": "Creates a <a>Deployment</a> resource, which makes a specified <a>RestApi</a> callable over the internet.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CreateDeployment.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteDeployment": {
+            "main": "./lib/actions/DeleteDeployment.js",
+            "title": "Deletes a <a>Deployment</a> resource. Deleting a deployment will only succeed if there are no <a>Stage</a> resources associated with it.",
+            "description": "Deletes a <a>Deployment</a> resource. Deleting a deployment will only succeed if there are no <a>Stage</a> resources associated with it.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteDeployment.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetDeployment": {
+            "main": "./lib/actions/GetDeployment.js",
+            "title": "Gets information about a <a>Deployment</a> resource.",
+            "description": "Gets information about a <a>Deployment</a> resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetDeployment.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UpdateDeployment": {
+            "main": "./lib/actions/UpdateDeployment.js",
+            "title": "Changes information about a <a>Deployment</a> resource.",
+            "description": "Changes information about a <a>Deployment</a> resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UpdateDeployment.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetDocumentationParts": {
+            "main": "./lib/actions/GetDocumentationParts.js",
+            "title": "GetDocumentationParts",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetDocumentationParts.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CreateDocumentationPart": {
+            "main": "./lib/actions/CreateDocumentationPart.js",
+            "title": "CreateDocumentationPart",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CreateDocumentationPart.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ImportDocumentationParts": {
+            "main": "./lib/actions/ImportDocumentationParts.js",
+            "title": "ImportDocumentationParts",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ImportDocumentationParts.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteDocumentationPart": {
+            "main": "./lib/actions/DeleteDocumentationPart.js",
+            "title": "DeleteDocumentationPart",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteDocumentationPart.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetDocumentationPart": {
+            "main": "./lib/actions/GetDocumentationPart.js",
+            "title": "GetDocumentationPart",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetDocumentationPart.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UpdateDocumentationPart": {
+            "main": "./lib/actions/UpdateDocumentationPart.js",
+            "title": "UpdateDocumentationPart",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UpdateDocumentationPart.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetDocumentationVersions": {
+            "main": "./lib/actions/GetDocumentationVersions.js",
+            "title": "GetDocumentationVersions",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetDocumentationVersions.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CreateDocumentationVersion": {
+            "main": "./lib/actions/CreateDocumentationVersion.js",
+            "title": "CreateDocumentationVersion",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CreateDocumentationVersion.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteDocumentationVersion": {
+            "main": "./lib/actions/DeleteDocumentationVersion.js",
+            "title": "DeleteDocumentationVersion",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteDocumentationVersion.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetDocumentationVersion": {
+            "main": "./lib/actions/GetDocumentationVersion.js",
+            "title": "GetDocumentationVersion",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetDocumentationVersion.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UpdateDocumentationVersion": {
+            "main": "./lib/actions/UpdateDocumentationVersion.js",
+            "title": "UpdateDocumentationVersion",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UpdateDocumentationVersion.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetGatewayResponses": {
+            "main": "./lib/actions/GetGatewayResponses.js",
+            "title": "Gets the <a>GatewayResponses</a> collection on the given <a>RestApi</a>. If an API developer has not added any definitions for gateway responses, the result will be the API Gateway-generated default <a>GatewayResponses</a> collection for the supported response types.",
+            "description": "Gets the <a>GatewayResponses</a> collection on the given <a>RestApi</a>. If an API developer has not added any definitions for gateway responses, the result will be the API Gateway-generated default <a>GatewayResponses</a> collection for the supported response types.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetGatewayResponses.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteGatewayResponse": {
+            "main": "./lib/actions/DeleteGatewayResponse.js",
+            "title": "Clears any customization of a <a>GatewayResponse</a> of a specified response type on the given <a>RestApi</a> and resets it with the default settings.",
+            "description": "Clears any customization of a <a>GatewayResponse</a> of a specified response type on the given <a>RestApi</a> and resets it with the default settings.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteGatewayResponse.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetGatewayResponse": {
+            "main": "./lib/actions/GetGatewayResponse.js",
+            "title": "Gets a <a>GatewayResponse</a> of a specified response type on the given <a>RestApi</a>.",
+            "description": "Gets a <a>GatewayResponse</a> of a specified response type on the given <a>RestApi</a>.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetGatewayResponse.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PutGatewayResponse": {
+            "main": "./lib/actions/PutGatewayResponse.js",
+            "title": "Creates a customization of a <a>GatewayResponse</a> of a specified response type and status code on the given <a>RestApi</a>.",
+            "description": "Creates a customization of a <a>GatewayResponse</a> of a specified response type and status code on the given <a>RestApi</a>.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PutGatewayResponse.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UpdateGatewayResponse": {
+            "main": "./lib/actions/UpdateGatewayResponse.js",
+            "title": "Updates a <a>GatewayResponse</a> of a specified response type on the given <a>RestApi</a>.",
+            "description": "Updates a <a>GatewayResponse</a> of a specified response type on the given <a>RestApi</a>.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UpdateGatewayResponse.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetModels": {
+            "main": "./lib/actions/GetModels.js",
+            "title": "Describes existing <a>Models</a> defined for a <a>RestApi</a> resource.",
+            "description": "Describes existing <a>Models</a> defined for a <a>RestApi</a> resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetModels.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CreateModel": {
+            "main": "./lib/actions/CreateModel.js",
+            "title": "Adds a new <a>Model</a> resource to an existing <a>RestApi</a> resource.",
+            "description": "Adds a new <a>Model</a> resource to an existing <a>RestApi</a> resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CreateModel.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteModel": {
+            "main": "./lib/actions/DeleteModel.js",
+            "title": "Deletes a model.",
+            "description": "Deletes a model.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteModel.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetModel": {
+            "main": "./lib/actions/GetModel.js",
+            "title": "Describes an existing model defined for a <a>RestApi</a> resource.",
+            "description": "Describes an existing model defined for a <a>RestApi</a> resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetModel.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UpdateModel": {
+            "main": "./lib/actions/UpdateModel.js",
+            "title": "Changes information about a model.",
+            "description": "Changes information about a model.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UpdateModel.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetModelTemplate": {
+            "main": "./lib/actions/GetModelTemplate.js",
+            "title": "Generates a sample mapping template that can be used to transform a payload into the structure of a model.",
+            "description": "Generates a sample mapping template that can be used to transform a payload into the structure of a model.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetModelTemplate.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetRequestValidators": {
+            "main": "./lib/actions/GetRequestValidators.js",
+            "title": "Gets the <a>RequestValidators</a> collection of a given <a>RestApi</a>.",
+            "description": "Gets the <a>RequestValidators</a> collection of a given <a>RestApi</a>.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetRequestValidators.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CreateRequestValidator": {
+            "main": "./lib/actions/CreateRequestValidator.js",
+            "title": "Creates a <a>ReqeustValidator</a> of a given <a>RestApi</a>.",
+            "description": "Creates a <a>ReqeustValidator</a> of a given <a>RestApi</a>.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CreateRequestValidator.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteRequestValidator": {
+            "main": "./lib/actions/DeleteRequestValidator.js",
+            "title": "Deletes a <a>RequestValidator</a> of a given <a>RestApi</a>.",
+            "description": "Deletes a <a>RequestValidator</a> of a given <a>RestApi</a>.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteRequestValidator.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetRequestValidator": {
+            "main": "./lib/actions/GetRequestValidator.js",
+            "title": "Gets a <a>RequestValidator</a> of a given <a>RestApi</a>.",
+            "description": "Gets a <a>RequestValidator</a> of a given <a>RestApi</a>.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetRequestValidator.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UpdateRequestValidator": {
+            "main": "./lib/actions/UpdateRequestValidator.js",
+            "title": "Updates a <a>RequestValidator</a> of a given <a>RestApi</a>.",
+            "description": "Updates a <a>RequestValidator</a> of a given <a>RestApi</a>.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UpdateRequestValidator.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetResources": {
+            "main": "./lib/actions/GetResources.js",
+            "title": "Lists information about a collection of <a>Resource</a> resources.",
+            "description": "Lists information about a collection of <a>Resource</a> resources.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetResources.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CreateResource": {
+            "main": "./lib/actions/CreateResource.js",
+            "title": "Creates a <a>Resource</a> resource.",
+            "description": "Creates a <a>Resource</a> resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CreateResource.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteResource": {
+            "main": "./lib/actions/DeleteResource.js",
+            "title": "Deletes a <a>Resource</a> resource.",
+            "description": "Deletes a <a>Resource</a> resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteResource.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetResource": {
+            "main": "./lib/actions/GetResource.js",
+            "title": "Lists information about a resource.",
+            "description": "Lists information about a resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetResource.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UpdateResource": {
+            "main": "./lib/actions/UpdateResource.js",
+            "title": "Changes information about a <a>Resource</a> resource.",
+            "description": "Changes information about a <a>Resource</a> resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UpdateResource.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteMethod": {
+            "main": "./lib/actions/DeleteMethod.js",
+            "title": "Deletes an existing <a>Method</a> resource.",
+            "description": "Deletes an existing <a>Method</a> resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteMethod.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetMethod": {
+            "main": "./lib/actions/GetMethod.js",
+            "title": "Describe an existing <a>Method</a> resource.",
+            "description": "Describe an existing <a>Method</a> resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetMethod.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PutMethod": {
+            "main": "./lib/actions/PutMethod.js",
+            "title": "Add a method to an existing <a>Resource</a> resource.",
+            "description": "Add a method to an existing <a>Resource</a> resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PutMethod.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "TestInvokeMethod": {
+            "main": "./lib/actions/TestInvokeMethod.js",
+            "title": "Simulate the execution of a <a>Method</a> in your <a>RestApi</a> with headers, parameters, and an incoming request body.",
+            "description": "Simulate the execution of a <a>Method</a> in your <a>RestApi</a> with headers, parameters, and an incoming request body.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/TestInvokeMethod.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UpdateMethod": {
+            "main": "./lib/actions/UpdateMethod.js",
+            "title": "Updates an existing <a>Method</a> resource.",
+            "description": "Updates an existing <a>Method</a> resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UpdateMethod.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteIntegration": {
+            "main": "./lib/actions/DeleteIntegration.js",
+            "title": "Represents a delete integration.",
+            "description": "Represents a delete integration.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteIntegration.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetIntegration": {
+            "main": "./lib/actions/GetIntegration.js",
+            "title": "Get the integration settings.",
+            "description": "Get the integration settings.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetIntegration.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PutIntegration": {
+            "main": "./lib/actions/PutIntegration.js",
+            "title": "Sets up a method's integration.",
+            "description": "Sets up a method's integration.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PutIntegration.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UpdateIntegration": {
+            "main": "./lib/actions/UpdateIntegration.js",
+            "title": "Represents an update integration.",
+            "description": "Represents an update integration.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UpdateIntegration.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteIntegrationResponse": {
+            "main": "./lib/actions/DeleteIntegrationResponse.js",
+            "title": "Represents a delete integration response.",
+            "description": "Represents a delete integration response.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteIntegrationResponse.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetIntegrationResponse": {
+            "main": "./lib/actions/GetIntegrationResponse.js",
+            "title": "Represents a get integration response.",
+            "description": "Represents a get integration response.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetIntegrationResponse.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PutIntegrationResponse": {
+            "main": "./lib/actions/PutIntegrationResponse.js",
+            "title": "Represents a put integration.",
+            "description": "Represents a put integration.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PutIntegrationResponse.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UpdateIntegrationResponse": {
+            "main": "./lib/actions/UpdateIntegrationResponse.js",
+            "title": "Represents an update integration response.",
+            "description": "Represents an update integration response.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UpdateIntegrationResponse.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteMethodResponse": {
+            "main": "./lib/actions/DeleteMethodResponse.js",
+            "title": "Deletes an existing <a>MethodResponse</a> resource.",
+            "description": "Deletes an existing <a>MethodResponse</a> resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteMethodResponse.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetMethodResponse": {
+            "main": "./lib/actions/GetMethodResponse.js",
+            "title": "Describes a <a>MethodResponse</a> resource.",
+            "description": "Describes a <a>MethodResponse</a> resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetMethodResponse.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PutMethodResponse": {
+            "main": "./lib/actions/PutMethodResponse.js",
+            "title": "Adds a <a>MethodResponse</a> to an existing <a>Method</a> resource.",
+            "description": "Adds a <a>MethodResponse</a> to an existing <a>Method</a> resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PutMethodResponse.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UpdateMethodResponse": {
+            "main": "./lib/actions/UpdateMethodResponse.js",
+            "title": "Updates an existing <a>MethodResponse</a> resource.",
+            "description": "Updates an existing <a>MethodResponse</a> resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UpdateMethodResponse.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetStages": {
+            "main": "./lib/actions/GetStages.js",
+            "title": "Gets information about one or more <a>Stage</a> resources.",
+            "description": "Gets information about one or more <a>Stage</a> resources.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetStages.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CreateStage": {
+            "main": "./lib/actions/CreateStage.js",
+            "title": "Creates a new <a>Stage</a> resource that references a pre-existing <a>Deployment</a> for the API. ",
+            "description": "Creates a new <a>Stage</a> resource that references a pre-existing <a>Deployment</a> for the API. ",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CreateStage.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteStage": {
+            "main": "./lib/actions/DeleteStage.js",
+            "title": "Deletes a <a>Stage</a> resource.",
+            "description": "Deletes a <a>Stage</a> resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteStage.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetStage": {
+            "main": "./lib/actions/GetStage.js",
+            "title": "Gets information about a <a>Stage</a> resource.",
+            "description": "Gets information about a <a>Stage</a> resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetStage.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UpdateStage": {
+            "main": "./lib/actions/UpdateStage.js",
+            "title": "Changes information about a <a>Stage</a> resource.",
+            "description": "Changes information about a <a>Stage</a> resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UpdateStage.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "FlushStageAuthorizersCache": {
+            "main": "./lib/actions/FlushStageAuthorizersCache.js",
+            "title": "Flushes all authorizer cache entries on a stage.",
+            "description": "Flushes all authorizer cache entries on a stage.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/FlushStageAuthorizersCache.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "FlushStageCache": {
+            "main": "./lib/actions/FlushStageCache.js",
+            "title": "Flushes a stage's cache.",
+            "description": "Flushes a stage's cache.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/FlushStageCache.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetExport": {
+            "main": "./lib/actions/GetExport.js",
+            "title": "Exports a deployed version of a <a>RestApi</a> in a specified format.",
+            "description": "Exports a deployed version of a <a>RestApi</a> in a specified format.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetExport.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetSdk": {
+            "main": "./lib/actions/GetSdk.js",
+            "title": "Generates a client SDK for a <a>RestApi</a> and <a>Stage</a>.",
+            "description": "Generates a client SDK for a <a>RestApi</a> and <a>Stage</a>.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetSdk.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetSdkTypes": {
+            "main": "./lib/actions/GetSdkTypes.js",
+            "title": "GetSdkTypes",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetSdkTypes.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetSdkType": {
+            "main": "./lib/actions/GetSdkType.js",
+            "title": "GetSdkType",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetSdkType.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTags": {
+            "main": "./lib/actions/GetTags.js",
+            "title": "Gets the <a>Tags</a> collection for a given resource.",
+            "description": "Gets the <a>Tags</a> collection for a given resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTags.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "TagResource": {
+            "main": "./lib/actions/TagResource.js",
+            "title": "Adds or updates a tag on a given resource.",
+            "description": "Adds or updates a tag on a given resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/TagResource.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UntagResource": {
+            "main": "./lib/actions/UntagResource.js",
+            "title": "Removes a tag from a given resource.",
+            "description": "Removes a tag from a given resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UntagResource.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetUsagePlans": {
+            "main": "./lib/actions/GetUsagePlans.js",
+            "title": "Gets all the usage plans of the caller's account.",
+            "description": "Gets all the usage plans of the caller's account.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetUsagePlans.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CreateUsagePlan": {
+            "main": "./lib/actions/CreateUsagePlan.js",
+            "title": "Creates a usage plan with the throttle and quota limits, as well as the associated API stages, specified in the payload. ",
+            "description": "Creates a usage plan with the throttle and quota limits, as well as the associated API stages, specified in the payload. ",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CreateUsagePlan.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteUsagePlan": {
+            "main": "./lib/actions/DeleteUsagePlan.js",
+            "title": "Deletes a usage plan of a given plan Id.",
+            "description": "Deletes a usage plan of a given plan Id.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteUsagePlan.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetUsagePlan": {
+            "main": "./lib/actions/GetUsagePlan.js",
+            "title": "Gets a usage plan of a given plan identifier.",
+            "description": "Gets a usage plan of a given plan identifier.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetUsagePlan.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UpdateUsagePlan": {
+            "main": "./lib/actions/UpdateUsagePlan.js",
+            "title": "Updates a usage plan of a given plan Id.",
+            "description": "Updates a usage plan of a given plan Id.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UpdateUsagePlan.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetUsagePlanKeys": {
+            "main": "./lib/actions/GetUsagePlanKeys.js",
+            "title": "Gets all the usage plan keys representing the API keys added to a specified usage plan.",
+            "description": "Gets all the usage plan keys representing the API keys added to a specified usage plan.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetUsagePlanKeys.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CreateUsagePlanKey": {
+            "main": "./lib/actions/CreateUsagePlanKey.js",
+            "title": "Creates a usage plan key for adding an existing API key to a usage plan.",
+            "description": "Creates a usage plan key for adding an existing API key to a usage plan.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CreateUsagePlanKey.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteUsagePlanKey": {
+            "main": "./lib/actions/DeleteUsagePlanKey.js",
+            "title": "Deletes a usage plan key and remove the underlying API key from the associated usage plan.",
+            "description": "Deletes a usage plan key and remove the underlying API key from the associated usage plan.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteUsagePlanKey.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetUsagePlanKey": {
+            "main": "./lib/actions/GetUsagePlanKey.js",
+            "title": "Gets a usage plan key of a given key identifier.",
+            "description": "Gets a usage plan key of a given key identifier.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetUsagePlanKey.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UpdateUsage": {
+            "main": "./lib/actions/UpdateUsage.js",
+            "title": "Grants a temporary extension to the remaining quota of a usage plan associated with a specified API key.",
+            "description": "Grants a temporary extension to the remaining quota of a usage plan associated with a specified API key.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UpdateUsage.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetUsage": {
+            "main": "./lib/actions/GetUsage.js",
+            "title": "Gets the usage data of a usage plan in a specified time interval.",
+            "description": "Gets the usage data of a usage plan in a specified time interval.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetUsage.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetVpcLinks": {
+            "main": "./lib/actions/GetVpcLinks.js",
+            "title": "Gets the <a>VpcLinks</a> collection under the caller's account in a selected region.",
+            "description": "Gets the <a>VpcLinks</a> collection under the caller's account in a selected region.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetVpcLinks.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CreateVpcLink": {
+            "main": "./lib/actions/CreateVpcLink.js",
+            "title": "Creates a VPC link, under the caller's account in a selected region, in an asynchronous operation that typically takes 2-4 minutes to complete and become operational. The caller must have permissions to create and update VPC Endpoint services.",
+            "description": "Creates a VPC link, under the caller's account in a selected region, in an asynchronous operation that typically takes 2-4 minutes to complete and become operational. The caller must have permissions to create and update VPC Endpoint services.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CreateVpcLink.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteVpcLink": {
+            "main": "./lib/actions/DeleteVpcLink.js",
+            "title": "Deletes an existing <a>VpcLink</a> of a specified identifier.",
+            "description": "Deletes an existing <a>VpcLink</a> of a specified identifier.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteVpcLink.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetVpcLink": {
+            "main": "./lib/actions/GetVpcLink.js",
+            "title": "Gets a specified VPC link under the caller's account in a region.",
+            "description": "Gets a specified VPC link under the caller's account in a region.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetVpcLink.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UpdateVpcLink": {
+            "main": "./lib/actions/UpdateVpcLink.js",
+            "title": "Updates an existing <a>VpcLink</a> of a specified identifier.",
+            "description": "Updates an existing <a>VpcLink</a> of a specified identifier.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UpdateVpcLink.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}

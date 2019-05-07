@@ -1,0 +1,126 @@
+{
+    "type": "object",
+    "properties": {
+        "restapi_id": {
+            "required": true,
+            "type": "string"
+        },
+        "Version": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "description": "Requests API Gateway to create a <a>Deployment</a> resource.",
+            "properties": {
+                "cacheClusterEnabled": {
+                    "description": "Enables a cache cluster for the <a>Stage</a> resource specified in the input.",
+                    "type": "boolean"
+                },
+                "cacheClusterSize": {
+                    "description": "Specifies the cache cluster size for the <a>Stage</a> resource specified in the input, if a cache cluster is enabled.",
+                    "enum": [
+                        "0.5",
+                        "1.6",
+                        "6.1",
+                        "13.5",
+                        "28.4",
+                        "58.2",
+                        "118",
+                        "237"
+                    ],
+                    "type": "string"
+                },
+                "canarySettings": {
+                    "description": "The input configuration for the canary deployment when the deployment is a canary release deployment. ",
+                    "properties": {
+                        "percentTraffic": {
+                            "description": "The percentage (0.0-100.0) of traffic routed to the canary deployment.",
+                            "format": "double",
+                            "type": "number"
+                        },
+                        "stageVariableOverrides": {
+                            "description": "A stage variable overrides used for the canary release deployment. They can override existing stage variables or add new stage variables for the canary release deployment. These stage variables are represented as a string-to-string map between stage variable names and their values.",
+                            "items": {
+                                "properties": {
+                                    "key": {
+                                        "type": "string"
+                                    },
+                                    "value": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            },
+                            "type": "array"
+                        },
+                        "useStageCache": {
+                            "description": "A Boolean flag to indicate whether the canary release deployment uses the stage cache or not.",
+                            "type": "boolean"
+                        }
+                    },
+                    "type": "object"
+                },
+                "description": {
+                    "description": "The description for the <a>Deployment</a> resource to create.",
+                    "type": "string"
+                },
+                "stageDescription": {
+                    "description": "The description of the <a>Stage</a> resource for the <a>Deployment</a> resource to create.",
+                    "type": "string"
+                },
+                "stageName": {
+                    "description": "The name of the <a>Stage</a> resource for the <a>Deployment</a> resource to create.",
+                    "type": "string"
+                },
+                "tracingEnabled": {
+                    "description": "Specifies whether active tracing with X-ray is enabled for the <a>Stage</a>.",
+                    "type": "boolean"
+                },
+                "variables": {
+                    "description": "A map that defines the stage variables for the <a>Stage</a> resource that is associated with the new deployment. Variable names can have alphanumeric and underscore characters, and the values must match <code>[A-Za-z0-9-._~:/?#&amp;=,]+</code>.",
+                    "items": {
+                        "properties": {
+                            "key": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
+                }
+            },
+            "type": "object"
+        },
+        "X_Amz_Content_Sha256": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Date": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Algorithm": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Credential": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Security_Token": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Signature": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_SignedHeaders": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

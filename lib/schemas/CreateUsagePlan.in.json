@@ -1,0 +1,141 @@
+{
+    "type": "object",
+    "properties": {
+        "Action": {
+            "required": true,
+            "type": "string"
+        },
+        "Version": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "description": "The POST request to create a usage plan with the name, description, throttle limits and quota limits, as well as the associated API stages, specified in the payload.",
+            "properties": {
+                "apiStages": {
+                    "description": "The associated API stages of the usage plan.",
+                    "items": {
+                        "description": "API stage name of the associated API stage in a usage plan.",
+                        "properties": {
+                            "apiId": {
+                                "description": "API Id of the associated API stage in a usage plan.",
+                                "type": "string"
+                            },
+                            "stage": {
+                                "description": "API stage name of the associated API stage in a usage plan.",
+                                "type": "string"
+                            },
+                            "throttle": {
+                                "description": "Map containing method level throttling information for API stage in a usage plan.",
+                                "items": {
+                                    "properties": {
+                                        "key": {
+                                            "type": "string"
+                                        },
+                                        "value": {
+                                            "description": " The API request rate limits.",
+                                            "properties": {
+                                                "burstLimit": {
+                                                    "description": "The API request burst limit, the maximum rate limit over a time ranging from one to a few seconds, depending upon whether the underlying token bucket is at its full capacity.",
+                                                    "type": "integer"
+                                                },
+                                                "rateLimit": {
+                                                    "description": "The API request steady-state rate limit.",
+                                                    "format": "double",
+                                                    "type": "number"
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                "type": "array"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "description": {
+                    "description": "The description of the usage plan.",
+                    "type": "string"
+                },
+                "name": {
+                    "description": "[Required] The name of the usage plan.",
+                    "type": "string"
+                },
+                "quota": {
+                    "description": "The quota of the usage plan.",
+                    "properties": {
+                        "limit": {
+                            "description": "The maximum number of requests that can be made in a given time period.",
+                            "type": "integer"
+                        },
+                        "offset": {
+                            "description": "The number of requests subtracted from the given limit in the initial time period.",
+                            "type": "integer"
+                        },
+                        "period": {
+                            "description": "The time period in which the limit applies. Valid values are \"DAY\", \"WEEK\" or \"MONTH\".",
+                            "enum": [
+                                "DAY",
+                                "WEEK",
+                                "MONTH"
+                            ],
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "throttle": {
+                    "description": "The throttling limits of the usage plan.",
+                    "properties": {
+                        "burstLimit": {
+                            "description": "The API request burst limit, the maximum rate limit over a time ranging from one to a few seconds, depending upon whether the underlying token bucket is at its full capacity.",
+                            "type": "integer"
+                        },
+                        "rateLimit": {
+                            "description": "The API request steady-state rate limit.",
+                            "format": "double",
+                            "type": "number"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "required": [
+                "name"
+            ],
+            "type": "object"
+        },
+        "X_Amz_Content_Sha256": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Date": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Algorithm": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Credential": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Security_Token": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Signature": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_SignedHeaders": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}
