@@ -5,7 +5,7 @@
 A generated **flow**ground connector for the Amazon API Gateway API (version 2015-07-09).
 
 Generated from: https://api.apis.guru/v2/specs/amazonaws.com/apigateway/2015-07-09/swagger.json<br/>
-Generated at: 2019-05-07T17:34:56+03:00
+Generated at: 2019-07-08T14:12:22+03:00
 
 ## API Description
 
@@ -17,7 +17,8 @@ Supported authorization schemes:
 - API Key
 ## Actions
 
-### Gets information about the current <a>Account</a> resource.
+### GetAccount
+> Gets information about the current <a>Account</a> resource.<br/>
 
 #### Input Parameters
 * `Action` - _required_
@@ -30,7 +31,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Changes information about the current <a>Account</a> resource.
+### UpdateAccount
+> Changes information about the current <a>Account</a> resource.<br/>
 
 #### Input Parameters
 * `Action` - _required_
@@ -43,11 +45,12 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Gets information about the current <a>ApiKeys</a> resource.
+### GetApiKeys
+> Gets information about the current <a>ApiKeys</a> resource.<br/>
 
 #### Input Parameters
-* `limit` - _optional_ - Pagination limit
-* `position` - _optional_ - Pagination token
+* `limit` - _optional_ - Pagination limit<br/>
+* `position` - _optional_ - Pagination token<br/>
 * `X-Amz-Content-Sha256` - _optional_
 * `X-Amz-Date` - _optional_
 * `X-Amz-Algorithm` - _optional_
@@ -56,7 +59,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### <p>Create an <a>ApiKey</a> resource. </p> <div class="seeAlso"><a href="https://docs.aws.amazon.com/cli/latest/reference/apigateway/create-api-key.html">AWS CLI</a></div>
+### CreateApiKey
+<blockquote><p>Create an <a>ApiKey</a> resource. </p> <div class="seeAlso"><a href="https://docs.aws.amazon.com/cli/latest/reference/apigateway/create-api-key.html">AWS CLI</a></div></blockquote>
 
 #### Input Parameters
 * `Action` - _required_
@@ -69,7 +73,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Import API keys from an external source, such as a CSV-formatted file.
+### ImportApiKeys
+> Import API keys from an external source, such as a CSV-formatted file.<br/>
 
 #### Input Parameters
 * `mode` - _required_
@@ -83,7 +88,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Deletes the <a>ApiKey</a> resource.
+### DeleteApiKey
+> Deletes the <a>ApiKey</a> resource.<br/>
 
 #### Input Parameters
 * `api_Key` - _required_
@@ -96,7 +102,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Gets information about the current <a>ApiKey</a> resource.
+### GetApiKey
+> Gets information about the current <a>ApiKey</a> resource.<br/>
 
 #### Input Parameters
 * `api_Key` - _required_
@@ -109,7 +116,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Changes information about an <a>ApiKey</a> resource.
+### UpdateApiKey
+> Changes information about an <a>ApiKey</a> resource.<br/>
 
 #### Input Parameters
 * `api_Key` - _required_
@@ -122,11 +130,12 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Gets a collection of <a>ClientCertificate</a> resources.
+### GetClientCertificates
+> Gets a collection of <a>ClientCertificate</a> resources.<br/>
 
 #### Input Parameters
-* `limit` - _optional_ - Pagination limit
-* `position` - _optional_ - Pagination token
+* `limit` - _optional_ - Pagination limit<br/>
+* `position` - _optional_ - Pagination token<br/>
 * `X-Amz-Content-Sha256` - _optional_
 * `X-Amz-Date` - _optional_
 * `X-Amz-Algorithm` - _optional_
@@ -135,7 +144,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Generates a <a>ClientCertificate</a> resource.
+### GenerateClientCertificate
+> Generates a <a>ClientCertificate</a> resource.<br/>
 
 #### Input Parameters
 * `Action` - _required_
@@ -148,7 +158,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Deletes the <a>ClientCertificate</a> resource.
+### DeleteClientCertificate
+> Deletes the <a>ClientCertificate</a> resource.<br/>
 
 #### Input Parameters
 * `clientcertificate_id` - _required_
@@ -161,7 +172,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Gets information about the current <a>ClientCertificate</a> resource.
+### GetClientCertificate
+> Gets information about the current <a>ClientCertificate</a> resource.<br/>
 
 #### Input Parameters
 * `clientcertificate_id` - _required_
@@ -174,7 +186,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Changes information about an <a>ClientCertificate</a> resource.
+### UpdateClientCertificate
+> Changes information about an <a>ClientCertificate</a> resource.<br/>
 
 #### Input Parameters
 * `clientcertificate_id` - _required_
@@ -187,11 +200,12 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Represents a collection of <a>DomainName</a> resources.
+### GetDomainNames
+> Represents a collection of <a>DomainName</a> resources.<br/>
 
 #### Input Parameters
-* `limit` - _optional_ - Pagination limit
-* `position` - _optional_ - Pagination token
+* `limit` - _optional_ - Pagination limit<br/>
+* `position` - _optional_ - Pagination token<br/>
 * `X-Amz-Content-Sha256` - _optional_
 * `X-Amz-Date` - _optional_
 * `X-Amz-Algorithm` - _optional_
@@ -200,7 +214,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Creates a new domain name.
+### CreateDomainName
+> Creates a new domain name.<br/>
 
 #### Input Parameters
 * `Action` - _required_
@@ -213,7 +228,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Deletes the <a>DomainName</a> resource.
+### DeleteDomainName
+> Deletes the <a>DomainName</a> resource.<br/>
 
 #### Input Parameters
 * `domain_name` - _required_
@@ -226,7 +242,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Represents a domain name that is contained in a simpler, more intuitive URL that can be called.
+### GetDomainName
+> Represents a domain name that is contained in a simpler, more intuitive URL that can be called.<br/>
 
 #### Input Parameters
 * `domain_name` - _required_
@@ -239,7 +256,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Changes information about the <a>DomainName</a> resource.
+### UpdateDomainName
+> Changes information about the <a>DomainName</a> resource.<br/>
 
 #### Input Parameters
 * `domain_name` - _required_
@@ -252,11 +270,12 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Represents a collection of <a>BasePathMapping</a> resources.
+### GetBasePathMappings
+> Represents a collection of <a>BasePathMapping</a> resources.<br/>
 
 #### Input Parameters
-* `limit` - _optional_ - Pagination limit
-* `position` - _optional_ - Pagination token
+* `limit` - _optional_ - Pagination limit<br/>
+* `position` - _optional_ - Pagination token<br/>
 * `domain_name` - _required_
 * `X-Amz-Date` - _optional_
 * `X-Amz-Algorithm` - _optional_
@@ -265,7 +284,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Creates a new <a>BasePathMapping</a> resource.
+### CreateBasePathMapping
+> Creates a new <a>BasePathMapping</a> resource.<br/>
 
 #### Input Parameters
 * `domain_name` - _required_
@@ -278,7 +298,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Deletes the <a>BasePathMapping</a> resource.
+### DeleteBasePathMapping
+> Deletes the <a>BasePathMapping</a> resource.<br/>
 
 #### Input Parameters
 * `domain_name` - _required_
@@ -291,7 +312,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Describe a <a>BasePathMapping</a> resource.
+### GetBasePathMapping
+> Describe a <a>BasePathMapping</a> resource.<br/>
 
 #### Input Parameters
 * `domain_name` - _required_
@@ -304,7 +326,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Changes information about the <a>BasePathMapping</a> resource.
+### UpdateBasePathMapping
+> Changes information about the <a>BasePathMapping</a> resource.<br/>
 
 #### Input Parameters
 * `domain_name` - _required_
@@ -317,11 +340,12 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Lists the <a>RestApis</a> resources for your collection.
+### GetRestApis
+> Lists the <a>RestApis</a> resources for your collection.<br/>
 
 #### Input Parameters
-* `limit` - _optional_ - Pagination limit
-* `position` - _optional_ - Pagination token
+* `limit` - _optional_ - Pagination limit<br/>
+* `position` - _optional_ - Pagination token<br/>
 * `X-Amz-Content-Sha256` - _optional_
 * `X-Amz-Date` - _optional_
 * `X-Amz-Algorithm` - _optional_
@@ -330,7 +354,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Creates a new <a>RestApi</a> resource.
+### CreateRestApi
+> Creates a new <a>RestApi</a> resource.<br/>
 
 #### Input Parameters
 * `Action` - _required_
@@ -343,7 +368,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### A feature of the API Gateway control service for creating a new API from an external API definition file.
+### ImportRestApi
+> A feature of the API Gateway control service for creating a new API from an external API definition file.<br/>
 
 #### Input Parameters
 * `mode` - _required_
@@ -357,7 +383,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Deletes the specified API.
+### DeleteRestApi
+> Deletes the specified API.<br/>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -370,7 +397,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Lists the <a>RestApi</a> resource in the collection.
+### GetRestApi
+> Lists the <a>RestApi</a> resource in the collection.<br/>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -383,7 +411,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### A feature of the API Gateway control service for updating an existing API with an input of external API definitions. The update can take the form of merging the supplied definition into the existing API or overwriting the existing API.
+### PutRestApi
+> A feature of the API Gateway control service for updating an existing API with an input of external API definitions. The update can take the form of merging the supplied definition into the existing API or overwriting the existing API.<br/>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -396,7 +425,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Changes information about the specified API.
+### UpdateRestApi
+> Changes information about the specified API.<br/>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -409,7 +439,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### <p>Describe an existing <a>Authorizers</a> resource.</p> <div class="seeAlso"><a href="https://docs.aws.amazon.com/cli/latest/reference/apigateway/get-authorizers.html">AWS CLI</a></div>
+### GetAuthorizers
+<blockquote><p>Describe an existing <a>Authorizers</a> resource.</p> <div class="seeAlso"><a href="https://docs.aws.amazon.com/cli/latest/reference/apigateway/get-authorizers.html">AWS CLI</a></div></blockquote>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -422,7 +453,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### <p>Adds a new <a>Authorizer</a> resource to an existing <a>RestApi</a> resource.</p> <div class="seeAlso"><a href="https://docs.aws.amazon.com/cli/latest/reference/apigateway/create-authorizer.html">AWS CLI</a></div>
+### CreateAuthorizer
+<blockquote><p>Adds a new <a>Authorizer</a> resource to an existing <a>RestApi</a> resource.</p> <div class="seeAlso"><a href="https://docs.aws.amazon.com/cli/latest/reference/apigateway/create-authorizer.html">AWS CLI</a></div></blockquote>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -435,7 +467,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### <p>Deletes an existing <a>Authorizer</a> resource.</p> <div class="seeAlso"><a href="https://docs.aws.amazon.com/cli/latest/reference/apigateway/delete-authorizer.html">AWS CLI</a></div>
+### DeleteAuthorizer
+<blockquote><p>Deletes an existing <a>Authorizer</a> resource.</p> <div class="seeAlso"><a href="https://docs.aws.amazon.com/cli/latest/reference/apigateway/delete-authorizer.html">AWS CLI</a></div></blockquote>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -448,7 +481,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### <p>Describe an existing <a>Authorizer</a> resource.</p> <div class="seeAlso"><a href="https://docs.aws.amazon.com/cli/latest/reference/apigateway/get-authorizer.html">AWS CLI</a></div>
+### GetAuthorizer
+<blockquote><p>Describe an existing <a>Authorizer</a> resource.</p> <div class="seeAlso"><a href="https://docs.aws.amazon.com/cli/latest/reference/apigateway/get-authorizer.html">AWS CLI</a></div></blockquote>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -461,7 +495,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### <p>Simulate the execution of an <a>Authorizer</a> in your <a>RestApi</a> with headers, parameters, and an incoming request body.</p> <div class="seeAlso"> <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/use-custom-authorizer.html">Enable custom authorizers</a> </div>
+### TestInvokeAuthorizer
+<blockquote><p>Simulate the execution of an <a>Authorizer</a> in your <a>RestApi</a> with headers, parameters, and an incoming request body.</p> <div class="seeAlso"> <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/use-custom-authorizer.html">Enable custom authorizers</a> </div></blockquote>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -474,7 +509,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### <p>Updates an existing <a>Authorizer</a> resource.</p> <div class="seeAlso"><a href="https://docs.aws.amazon.com/cli/latest/reference/apigateway/update-authorizer.html">AWS CLI</a></div>
+### UpdateAuthorizer
+<blockquote><p>Updates an existing <a>Authorizer</a> resource.</p> <div class="seeAlso"><a href="https://docs.aws.amazon.com/cli/latest/reference/apigateway/update-authorizer.html">AWS CLI</a></div></blockquote>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -487,11 +523,12 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Gets information about a <a>Deployments</a> collection.
+### GetDeployments
+> Gets information about a <a>Deployments</a> collection.<br/>
 
 #### Input Parameters
-* `limit` - _optional_ - Pagination limit
-* `position` - _optional_ - Pagination token
+* `limit` - _optional_ - Pagination limit<br/>
+* `position` - _optional_ - Pagination token<br/>
 * `restapi_id` - _required_
 * `X-Amz-Date` - _optional_
 * `X-Amz-Algorithm` - _optional_
@@ -500,7 +537,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Creates a <a>Deployment</a> resource, which makes a specified <a>RestApi</a> callable over the internet.
+### CreateDeployment
+> Creates a <a>Deployment</a> resource, which makes a specified <a>RestApi</a> callable over the internet.<br/>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -513,7 +551,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Deletes a <a>Deployment</a> resource. Deleting a deployment will only succeed if there are no <a>Stage</a> resources associated with it.
+### DeleteDeployment
+> Deletes a <a>Deployment</a> resource. Deleting a deployment will only succeed if there are no <a>Stage</a> resources associated with it.<br/>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -526,7 +565,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Gets information about a <a>Deployment</a> resource.
+### GetDeployment
+> Gets information about a <a>Deployment</a> resource.<br/>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -539,7 +579,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Changes information about a <a>Deployment</a> resource.
+### UpdateDeployment
+> Changes information about a <a>Deployment</a> resource.<br/>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -695,7 +736,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Gets the <a>GatewayResponses</a> collection on the given <a>RestApi</a>. If an API developer has not added any definitions for gateway responses, the result will be the API Gateway-generated default <a>GatewayResponses</a> collection for the supported response types.
+### GetGatewayResponses
+> Gets the <a>GatewayResponses</a> collection on the given <a>RestApi</a>. If an API developer has not added any definitions for gateway responses, the result will be the API Gateway-generated default <a>GatewayResponses</a> collection for the supported response types.<br/>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -708,7 +750,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Clears any customization of a <a>GatewayResponse</a> of a specified response type on the given <a>RestApi</a> and resets it with the default settings.
+### DeleteGatewayResponse
+> Clears any customization of a <a>GatewayResponse</a> of a specified response type on the given <a>RestApi</a> and resets it with the default settings.<br/>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -721,7 +764,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Gets a <a>GatewayResponse</a> of a specified response type on the given <a>RestApi</a>.
+### GetGatewayResponse
+> Gets a <a>GatewayResponse</a> of a specified response type on the given <a>RestApi</a>.<br/>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -734,7 +778,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Creates a customization of a <a>GatewayResponse</a> of a specified response type and status code on the given <a>RestApi</a>.
+### PutGatewayResponse
+> Creates a customization of a <a>GatewayResponse</a> of a specified response type and status code on the given <a>RestApi</a>.<br/>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -747,7 +792,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Updates a <a>GatewayResponse</a> of a specified response type on the given <a>RestApi</a>.
+### UpdateGatewayResponse
+> Updates a <a>GatewayResponse</a> of a specified response type on the given <a>RestApi</a>.<br/>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -760,11 +806,12 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Describes existing <a>Models</a> defined for a <a>RestApi</a> resource.
+### GetModels
+> Describes existing <a>Models</a> defined for a <a>RestApi</a> resource.<br/>
 
 #### Input Parameters
-* `limit` - _optional_ - Pagination limit
-* `position` - _optional_ - Pagination token
+* `limit` - _optional_ - Pagination limit<br/>
+* `position` - _optional_ - Pagination token<br/>
 * `restapi_id` - _required_
 * `X-Amz-Date` - _optional_
 * `X-Amz-Algorithm` - _optional_
@@ -773,7 +820,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Adds a new <a>Model</a> resource to an existing <a>RestApi</a> resource.
+### CreateModel
+> Adds a new <a>Model</a> resource to an existing <a>RestApi</a> resource.<br/>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -786,7 +834,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Deletes a model.
+### DeleteModel
+> Deletes a model.<br/>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -799,7 +848,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Describes an existing model defined for a <a>RestApi</a> resource.
+### GetModel
+> Describes an existing model defined for a <a>RestApi</a> resource.<br/>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -812,7 +862,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Changes information about a model.
+### UpdateModel
+> Changes information about a model.<br/>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -825,7 +876,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Generates a sample mapping template that can be used to transform a payload into the structure of a model.
+### GetModelTemplate
+> Generates a sample mapping template that can be used to transform a payload into the structure of a model.<br/>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -838,7 +890,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Gets the <a>RequestValidators</a> collection of a given <a>RestApi</a>.
+### GetRequestValidators
+> Gets the <a>RequestValidators</a> collection of a given <a>RestApi</a>.<br/>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -851,7 +904,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Creates a <a>ReqeustValidator</a> of a given <a>RestApi</a>.
+### CreateRequestValidator
+> Creates a <a>ReqeustValidator</a> of a given <a>RestApi</a>.<br/>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -864,7 +918,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Deletes a <a>RequestValidator</a> of a given <a>RestApi</a>.
+### DeleteRequestValidator
+> Deletes a <a>RequestValidator</a> of a given <a>RestApi</a>.<br/>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -877,7 +932,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Gets a <a>RequestValidator</a> of a given <a>RestApi</a>.
+### GetRequestValidator
+> Gets a <a>RequestValidator</a> of a given <a>RestApi</a>.<br/>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -890,7 +946,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Updates a <a>RequestValidator</a> of a given <a>RestApi</a>.
+### UpdateRequestValidator
+> Updates a <a>RequestValidator</a> of a given <a>RestApi</a>.<br/>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -903,11 +960,12 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Lists information about a collection of <a>Resource</a> resources.
+### GetResources
+> Lists information about a collection of <a>Resource</a> resources.<br/>
 
 #### Input Parameters
-* `limit` - _optional_ - Pagination limit
-* `position` - _optional_ - Pagination token
+* `limit` - _optional_ - Pagination limit<br/>
+* `position` - _optional_ - Pagination token<br/>
 * `restapi_id` - _required_
 * `X-Amz-Date` - _optional_
 * `X-Amz-Algorithm` - _optional_
@@ -916,7 +974,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Creates a <a>Resource</a> resource.
+### CreateResource
+> Creates a <a>Resource</a> resource.<br/>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -929,7 +988,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Deletes a <a>Resource</a> resource.
+### DeleteResource
+> Deletes a <a>Resource</a> resource.<br/>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -942,7 +1002,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Lists information about a resource.
+### GetResource
+> Lists information about a resource.<br/>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -955,7 +1016,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Changes information about a <a>Resource</a> resource.
+### UpdateResource
+> Changes information about a <a>Resource</a> resource.<br/>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -968,7 +1030,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Deletes an existing <a>Method</a> resource.
+### DeleteMethod
+> Deletes an existing <a>Method</a> resource.<br/>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -981,7 +1044,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Describe an existing <a>Method</a> resource.
+### GetMethod
+> Describe an existing <a>Method</a> resource.<br/>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -994,7 +1058,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Add a method to an existing <a>Resource</a> resource.
+### PutMethod
+> Add a method to an existing <a>Resource</a> resource.<br/>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -1007,7 +1072,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Simulate the execution of a <a>Method</a> in your <a>RestApi</a> with headers, parameters, and an incoming request body.
+### TestInvokeMethod
+> Simulate the execution of a <a>Method</a> in your <a>RestApi</a> with headers, parameters, and an incoming request body.<br/>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -1020,7 +1086,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Updates an existing <a>Method</a> resource.
+### UpdateMethod
+> Updates an existing <a>Method</a> resource.<br/>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -1033,7 +1100,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Represents a delete integration.
+### DeleteIntegration
+> Represents a delete integration.<br/>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -1046,7 +1114,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Get the integration settings.
+### GetIntegration
+> Get the integration settings.<br/>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -1059,7 +1128,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Sets up a method's integration.
+### PutIntegration
+> Sets up a method's integration.<br/>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -1072,7 +1142,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Represents an update integration.
+### UpdateIntegration
+> Represents an update integration.<br/>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -1085,7 +1156,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Represents a delete integration response.
+### DeleteIntegrationResponse
+> Represents a delete integration response.<br/>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -1098,7 +1170,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Represents a get integration response.
+### GetIntegrationResponse
+> Represents a get integration response.<br/>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -1111,7 +1184,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Represents a put integration.
+### PutIntegrationResponse
+> Represents a put integration.<br/>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -1124,7 +1198,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Represents an update integration response.
+### UpdateIntegrationResponse
+> Represents an update integration response.<br/>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -1137,7 +1212,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Deletes an existing <a>MethodResponse</a> resource.
+### DeleteMethodResponse
+> Deletes an existing <a>MethodResponse</a> resource.<br/>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -1150,7 +1226,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Describes a <a>MethodResponse</a> resource.
+### GetMethodResponse
+> Describes a <a>MethodResponse</a> resource.<br/>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -1163,7 +1240,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Adds a <a>MethodResponse</a> to an existing <a>Method</a> resource.
+### PutMethodResponse
+> Adds a <a>MethodResponse</a> to an existing <a>Method</a> resource.<br/>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -1176,7 +1254,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Updates an existing <a>MethodResponse</a> resource.
+### UpdateMethodResponse
+> Updates an existing <a>MethodResponse</a> resource.<br/>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -1189,7 +1268,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Gets information about one or more <a>Stage</a> resources.
+### GetStages
+> Gets information about one or more <a>Stage</a> resources.<br/>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -1202,7 +1282,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Creates a new <a>Stage</a> resource that references a pre-existing <a>Deployment</a> for the API.
+### CreateStage
+> Creates a new <a>Stage</a> resource that references a pre-existing <a>Deployment</a> for the API.<br/>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -1215,7 +1296,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Deletes a <a>Stage</a> resource.
+### DeleteStage
+> Deletes a <a>Stage</a> resource.<br/>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -1228,7 +1310,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Gets information about a <a>Stage</a> resource.
+### GetStage
+> Gets information about a <a>Stage</a> resource.<br/>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -1241,7 +1324,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Changes information about a <a>Stage</a> resource.
+### UpdateStage
+> Changes information about a <a>Stage</a> resource.<br/>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -1254,7 +1338,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Flushes all authorizer cache entries on a stage.
+### FlushStageAuthorizersCache
+> Flushes all authorizer cache entries on a stage.<br/>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -1267,7 +1352,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Flushes a stage's cache.
+### FlushStageCache
+> Flushes a stage's cache.<br/>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -1280,7 +1366,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Exports a deployed version of a <a>RestApi</a> in a specified format.
+### GetExport
+> Exports a deployed version of a <a>RestApi</a> in a specified format.<br/>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -1293,7 +1380,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Generates a client SDK for a <a>RestApi</a> and <a>Stage</a>.
+### GetSdk
+> Generates a client SDK for a <a>RestApi</a> and <a>Stage</a>.<br/>
 
 #### Input Parameters
 * `restapi_id` - _required_
@@ -1332,7 +1420,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Gets the <a>Tags</a> collection for a given resource.
+### GetTags
+> Gets the <a>Tags</a> collection for a given resource.<br/>
 
 #### Input Parameters
 * `resource_arn` - _required_
@@ -1345,7 +1434,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Adds or updates a tag on a given resource.
+### TagResource
+> Adds or updates a tag on a given resource.<br/>
 
 #### Input Parameters
 * `resource_arn` - _required_
@@ -1358,7 +1448,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Removes a tag from a given resource.
+### UntagResource
+> Removes a tag from a given resource.<br/>
 
 #### Input Parameters
 * `resource_arn` - _required_
@@ -1371,11 +1462,12 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Gets all the usage plans of the caller's account.
+### GetUsagePlans
+> Gets all the usage plans of the caller's account.<br/>
 
 #### Input Parameters
-* `limit` - _optional_ - Pagination limit
-* `position` - _optional_ - Pagination token
+* `limit` - _optional_ - Pagination limit<br/>
+* `position` - _optional_ - Pagination token<br/>
 * `X-Amz-Content-Sha256` - _optional_
 * `X-Amz-Date` - _optional_
 * `X-Amz-Algorithm` - _optional_
@@ -1384,7 +1476,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Creates a usage plan with the throttle and quota limits, as well as the associated API stages, specified in the payload.
+### CreateUsagePlan
+> Creates a usage plan with the throttle and quota limits, as well as the associated API stages, specified in the payload.<br/>
 
 #### Input Parameters
 * `Action` - _required_
@@ -1397,7 +1490,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Deletes a usage plan of a given plan Id.
+### DeleteUsagePlan
+> Deletes a usage plan of a given plan Id.<br/>
 
 #### Input Parameters
 * `usageplanId` - _required_
@@ -1410,7 +1504,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Gets a usage plan of a given plan identifier.
+### GetUsagePlan
+> Gets a usage plan of a given plan identifier.<br/>
 
 #### Input Parameters
 * `usageplanId` - _required_
@@ -1423,7 +1518,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Updates a usage plan of a given plan Id.
+### UpdateUsagePlan
+> Updates a usage plan of a given plan Id.<br/>
 
 #### Input Parameters
 * `usageplanId` - _required_
@@ -1436,11 +1532,12 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Gets all the usage plan keys representing the API keys added to a specified usage plan.
+### GetUsagePlanKeys
+> Gets all the usage plan keys representing the API keys added to a specified usage plan.<br/>
 
 #### Input Parameters
-* `limit` - _optional_ - Pagination limit
-* `position` - _optional_ - Pagination token
+* `limit` - _optional_ - Pagination limit<br/>
+* `position` - _optional_ - Pagination token<br/>
 * `usageplanId` - _required_
 * `X-Amz-Date` - _optional_
 * `X-Amz-Algorithm` - _optional_
@@ -1449,7 +1546,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Creates a usage plan key for adding an existing API key to a usage plan.
+### CreateUsagePlanKey
+> Creates a usage plan key for adding an existing API key to a usage plan.<br/>
 
 #### Input Parameters
 * `usageplanId` - _required_
@@ -1462,7 +1560,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Deletes a usage plan key and remove the underlying API key from the associated usage plan.
+### DeleteUsagePlanKey
+> Deletes a usage plan key and remove the underlying API key from the associated usage plan.<br/>
 
 #### Input Parameters
 * `usageplanId` - _required_
@@ -1475,7 +1574,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Gets a usage plan key of a given key identifier.
+### GetUsagePlanKey
+> Gets a usage plan key of a given key identifier.<br/>
 
 #### Input Parameters
 * `usageplanId` - _required_
@@ -1488,7 +1588,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Grants a temporary extension to the remaining quota of a usage plan associated with a specified API key.
+### UpdateUsage
+> Grants a temporary extension to the remaining quota of a usage plan associated with a specified API key.<br/>
 
 #### Input Parameters
 * `usageplanId` - _required_
@@ -1501,11 +1602,12 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Gets the usage data of a usage plan in a specified time interval.
+### GetUsage
+> Gets the usage data of a usage plan in a specified time interval.<br/>
 
 #### Input Parameters
-* `limit` - _optional_ - Pagination limit
-* `position` - _optional_ - Pagination token
+* `limit` - _optional_ - Pagination limit<br/>
+* `position` - _optional_ - Pagination token<br/>
 * `usageplanId` - _required_
 * `X-Amz-Date` - _optional_
 * `X-Amz-Algorithm` - _optional_
@@ -1514,11 +1616,12 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Gets the <a>VpcLinks</a> collection under the caller's account in a selected region.
+### GetVpcLinks
+> Gets the <a>VpcLinks</a> collection under the caller's account in a selected region.<br/>
 
 #### Input Parameters
-* `limit` - _optional_ - Pagination limit
-* `position` - _optional_ - Pagination token
+* `limit` - _optional_ - Pagination limit<br/>
+* `position` - _optional_ - Pagination token<br/>
 * `X-Amz-Content-Sha256` - _optional_
 * `X-Amz-Date` - _optional_
 * `X-Amz-Algorithm` - _optional_
@@ -1527,7 +1630,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Creates a VPC link, under the caller's account in a selected region, in an asynchronous operation that typically takes 2-4 minutes to complete and become operational. The caller must have permissions to create and update VPC Endpoint services.
+### CreateVpcLink
+> Creates a VPC link, under the caller's account in a selected region, in an asynchronous operation that typically takes 2-4 minutes to complete and become operational. The caller must have permissions to create and update VPC Endpoint services.<br/>
 
 #### Input Parameters
 * `Action` - _required_
@@ -1540,7 +1644,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Deletes an existing <a>VpcLink</a> of a specified identifier.
+### DeleteVpcLink
+> Deletes an existing <a>VpcLink</a> of a specified identifier.<br/>
 
 #### Input Parameters
 * `vpclink_id` - _required_
@@ -1553,7 +1658,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Gets a specified VPC link under the caller's account in a region.
+### GetVpcLink
+> Gets a specified VPC link under the caller's account in a region.<br/>
 
 #### Input Parameters
 * `vpclink_id` - _required_
@@ -1566,7 +1672,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Updates an existing <a>VpcLink</a> of a specified identifier.
+### UpdateVpcLink
+> Updates an existing <a>VpcLink</a> of a specified identifier.<br/>
 
 #### Input Parameters
 * `vpclink_id` - _required_
